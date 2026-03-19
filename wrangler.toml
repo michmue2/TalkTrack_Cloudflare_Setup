@@ -1,0 +1,14 @@
+name            = "voice-cost-tracker"
+main            = "src/index.ts"
+compatibility_date = "2024-09-23"
+
+# After running `wrangler d1 create voice-cost-tracker-db`,
+# replace the placeholder below with the returned database_id.
+[[d1_databases]]
+binding       = "DB"
+database_name = "voice-cost-tracker-db"
+database_id   = "[pasteyour id here]"
+
+# Secrets are set via CLI (never commit real values here):
+#   wrangler secret put READ_API_KEY
+#   wrangler secret put SUPABASE_URL
